@@ -7,13 +7,12 @@
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; Copyright (c) 2018 STMicroelectronics.
-  * All rights reserved.</center></h2>
+  * Copyright (c) 2017-2019 STMicroelectronics.
+  * All rights reserved.
   *
-  * This software component is licensed by ST under BSD 3-Clause license,
-  * the "License"; You may not use this file except in compliance with the
-  * License. You may obtain a copy of the License at:
-  *                        opensource.org/licenses/BSD-3-Clause
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
   *
   ******************************************************************************
   */
@@ -43,7 +42,7 @@
   * Input         : Register Address, length of buffer
   * Output        : data Read
   *******************************************************************************/
-int32_t cs42l51_read_reg(cs42l51_ctx_t *ctx, uint16_t reg, uint8_t *data, uint16_t length)
+int32_t cs42l51_read_reg(const cs42l51_ctx_t *ctx, uint16_t reg, uint8_t *data, uint16_t length)
 {
   return ctx->ReadReg(ctx->handle, reg, data, length);
 }
@@ -55,7 +54,7 @@ int32_t cs42l51_read_reg(cs42l51_ctx_t *ctx, uint16_t reg, uint8_t *data, uint16
   * Input         : Register Address, data to be written, length of buffer
   * Output        : None
   *******************************************************************************/
-int32_t cs42l51_write_reg(cs42l51_ctx_t *ctx, uint16_t reg, uint8_t *data, uint16_t length)
+int32_t cs42l51_write_reg(const cs42l51_ctx_t *ctx, uint16_t reg, uint8_t *data, uint16_t length)
 {
   return ctx->WriteReg(ctx->handle, reg, data, length);
 }
@@ -72,5 +71,3 @@ int32_t cs42l51_write_reg(cs42l51_ctx_t *ctx, uint16_t reg, uint8_t *data, uint1
 /**
   * @}
   */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
